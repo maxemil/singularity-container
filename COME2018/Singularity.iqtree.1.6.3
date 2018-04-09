@@ -1,0 +1,23 @@
+Bootstrap: docker
+From: debian:jessie
+
+%labels
+Maintainer	max-emil.schon@icm.uu.se
+
+%post
+#### install system dependencies
+apt-get update
+apt-get clean
+apt-get install --no-install-recommends -qy \
+                  wget \
+                  ca-certificates
+
+######## IQtree #########
+cd /usr/local
+wget https://github.com/Cibiv/IQ-TREE/releases/download/v1.6.3/iqtree-1.6.3-Linux.tar.gz
+tar -xvf iqtree-1.6.3-Linux.tar.gz
+ln -s /usr/local/iqtree-1.6.3-Linux/bin/iqtree /usr/local/bin/iqtree
+
+
+%runscript
+iqtree  "$@"
