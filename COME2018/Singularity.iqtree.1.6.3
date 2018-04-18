@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: debian:jessie
+From: debian:stretch
 
 %labels
 Maintainer	max-emil.schon@icm.uu.se
@@ -18,6 +18,9 @@ wget https://github.com/Cibiv/IQ-TREE/releases/download/v1.6.3/iqtree-1.6.3-Linu
 tar -xvf iqtree-1.6.3-Linux.tar.gz
 ln -s /usr/local/iqtree-1.6.3-Linux/bin/iqtree /usr/local/bin/iqtree
 
+# create mount paths for Uppmax
+# https://www.uppmax.uu.se/support/user-guides/singularity-user-guide/
+mkdir /sw /pica /proj /scratch
 
 %runscript
 iqtree  "$@"
