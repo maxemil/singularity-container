@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: debian:jessie
+From: debian:stretch
 
 %labels
 Maintainer	max-emil.schon@icm.uu.se
@@ -13,7 +13,6 @@ apt-get install --no-install-recommends -qy \
                   build-essential \
                   git \
                   ca-certificates \
-
 
 ######## raxml-ng ########
 cd /usr/local/

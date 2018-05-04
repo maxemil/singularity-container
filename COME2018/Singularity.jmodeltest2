@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: debian:jessie
+From: debian:stretch
 
 %labels
 Maintainer	max-emil.schon@icm.uu.se
@@ -16,8 +16,11 @@ apt-get install --no-install-recommends -qy \
                   default-jdk \
                   ca-certificates \
                   libxrender1 \
-                  gsl-bin
+                  gsl-bin \
+                  locales
 
+echo en_US UTF-8 >> /etc/locale.gen
+locale-gen
 
 ######## jmodeltest2 #########
 cd /usr/local/

@@ -11,12 +11,11 @@ apt-get clean
 apt-get install --no-install-recommends -qy \
                   wget
 
-
-######## BLAST+ ########
+######## bali-phy #########
 cd /usr/local/
-wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.7.1+-x64-linux.tar.gz
-tar -xvf ncbi-blast-2.7.1+-x64-linux.tar.gz
-for binary in /usr/local/ncbi-blast-2.7.1+/bin/*; do ln -s $binary /usr/local/bin; done
+wget http://www.bali-phy.org/files/bali-phy-3.1-linux64.tar.gz
+tar xfvz bali-phy-3.1-linux64.tar.gz
+for b in /usr/local/bali-phy-3.1/bin/*; do ln -s $b /usr/local/bin; done
 
 %runscript
 exec "$@"
