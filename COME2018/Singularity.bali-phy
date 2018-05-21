@@ -9,13 +9,20 @@ Maintainer	max-emil.schon@icm.uu.se
 apt-get update
 apt-get clean
 apt-get install --no-install-recommends -qy \
-                  wget
+                  wget \
+                  locales \
+                  libjson-pp-perl \
+                  gnuplot \
+                  r-base
+
+echo en_US UTF-8 >> /etc/locale.gen
+locale-gen
 
 ######## bali-phy #########
 cd /usr/local/
-wget http://www.bali-phy.org/files/bali-phy-3.1-linux64.tar.gz
-tar xfvz bali-phy-3.1-linux64.tar.gz
-for b in /usr/local/bali-phy-3.1/bin/*; do ln -s $b /usr/local/bin; done
+wget http://www.bali-phy.org/files/bali-phy-3.1.3-linux64.tar.gz
+tar xfvz bali-phy-3.1.3-linux64.tar.gz
+for b in /usr/local/bali-phy-3.1.3/bin/*; do ln -s $b /usr/local/bin; done
 
 %runscript
 exec "$@"

@@ -26,4 +26,4 @@ tar -xvf seaview4-64.tgz
 ln -s /usr/local/seaview/seaview /usr/local/bin/seaview
 
 %runscript
-seaview
+seaview "$@"
