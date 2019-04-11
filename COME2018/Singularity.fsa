@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: debian:jessie
+From: debian:stretch
 
 %labels
 Maintainer	max-emil.schon@icm.uu.se

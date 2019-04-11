@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: debian:jessie
+From: debian:stretch
 
 %labels
 Maintainer	max-emil.schon@icm.uu.se
@@ -14,8 +14,7 @@ apt-get install --no-install-recommends -qy \
                   git \
                   ca-certificates \
 
-
-######## raxml-ng ########
+######## raxml ########
 cd /usr/local/
 git clone https://github.com/stamatak/standard-RAxML.git standard-raxml
 cd /usr/local/standard-raxml

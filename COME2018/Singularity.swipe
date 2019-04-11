@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: debian:jessie
+From: debian:stretch
 
 %labels
 Maintainer	max-emil.schon@icm.uu.se
@@ -12,8 +12,7 @@ apt-get install --no-install-recommends -qy \
                   wget \
                   build-essential
 
-
-######## PRANK #########
+######## Swipe #########
 cd /usr/local/
 wget http://dna.uio.no/swipe/swipe-2.0.5.tar.gz
 tar -xvf swipe-2.0.5.tar.gz

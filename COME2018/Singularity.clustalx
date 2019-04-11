@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: debian:jessie
+From: debian:stretch
 
 %labels
 Maintainer	max-emil.schon@icm.uu.se
@@ -15,7 +15,6 @@ apt-get install --no-install-recommends -qy \
                   libxrender1 \
                   gsl-bin
 
-
 ######## ClustalW ########
 cd /usr/local/
 wget http://www.clustal.org/download/current/clustalx-2.1.tar.gz
@@ -23,6 +22,7 @@ tar -xvf clustalx-2.1.tar.gz
 cd /usr/local/clustalx-2.1
 qmake
 make
+ln -s /usr/local/clustalx-2.1/clustalx /usr/local/bin
 
 %runscript
-clustalx2
+clustalx

@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: debian:jessie
+From: debian:stretch
 
 %labels
 Maintainer	max-emil.schon@icm.uu.se
@@ -20,7 +20,6 @@ apt-get install --no-install-recommends -qy \
                   bison \
                   libtool \
                   libgmp3-dev
-
 
 ######## raxml-ng ########
 cd /usr/local/

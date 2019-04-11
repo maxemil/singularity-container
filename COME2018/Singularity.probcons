@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: debian:jessie
+From: debian:stretch
 
 %labels
 Maintainer	max-emil.schon@icm.uu.se
@@ -11,8 +11,7 @@ apt-get clean
 apt-get install --no-install-recommends -qy \
                   probcons
 
-
-# ######## probcons #########
+######## probcons #########
 # cd /usr/local/
 # wget http://probcons.stanford.edu/probcons_v1_12.tar.gz
 # tar -xvf probcons_v1_12.tar.gz

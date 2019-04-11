@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: debian:jessie
+From: debian:stretch
 
 %labels
 Maintainer	max-emil.schon@icm.uu.se
@@ -11,7 +11,6 @@ apt-get clean
 apt-get install --no-install-recommends -qy \
                   wget \
                   build-essential
-
 
 ######## ClustalW ########
 cd /usr/local/

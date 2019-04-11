@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: debian:jessie
+From: debian:stretch
 
 %labels
 Maintainer	max-emil.schon@icm.uu.se
@@ -10,7 +10,6 @@ apt-get update
 apt-get clean
 apt-get install --no-install-recommends -qy \
                   wget \
-
 
 ######## MUSCLE #########
 cd /usr/local/
